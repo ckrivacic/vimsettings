@@ -2,3 +2,12 @@ Required programs:
 
 rtags
 any linters you want
+bear to get compiler options
+
+Notes for C++ devel:
+Run rtags server:
+    rdm &
+Index the files
+    rc -c gcc -I...?
+Load compilation commands
+    rc -J /path/to/compilation_commands.json
