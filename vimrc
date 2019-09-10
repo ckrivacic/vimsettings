@@ -11,8 +11,6 @@
 "
 "##############################################################"
 
-" Note: Make sure you copy this file to your home directory. 
-
     " General Settings {
 
         "execute pathogen#infect()
@@ -88,9 +86,13 @@
         " syntax plugin
         "Plugin 'vim-syntastic/syntastic'
         Plugin 'dense-analysis/ale'
+
         "c++ tags
         Plugin 'lyuts/vim-rtags'
         let g:rtagsRcCmd = '/home/ckrivacic/apps/rtags/bin/rc'
+        
+        " Automatically keep tags up to date
+        Plugin 'ludovicchabant/vim-gutentags'
         
         " Fuzzy searching with Ctrl-P
         Plugin 'kien/ctrlp.vim'
