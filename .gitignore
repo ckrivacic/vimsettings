@@ -1,2 +1,5 @@
 bundle/**
 bundle/*
+
+autoload/**
+autoload/*
