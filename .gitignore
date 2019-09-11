@@ -1,5 +1,7 @@
 bundle/**
 bundle/*
 
+tags
+
 autoload/**
 autoload/*
