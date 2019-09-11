@@ -82,6 +82,11 @@
         Plugin 'scrooloose/nerdcommenter'
         " surround.vim - simple quotation & bracket management
         Plugin 'tpope/vim-surround'
+        " QUotation autocomplete
+        Plugin 'jiangmiao/auto-pairs'
+
+        " Fixes repeat ('.') for certain plugins.
+        Plugin 'tpope/vim-repeat'
         
         " COLORS
         " Colors solarized
@@ -111,6 +116,7 @@
 
         " Completion
         Plugin 'ycm-core/YouCompleteMe'
+        let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
         " Airline
         Plugin 'vim-airline/vim-airline'
@@ -119,6 +125,12 @@
 
         " Github gutters
         Plugin 'mhinz/vim-signify'
+
+        " Snippets
+        Plugin 'SirVer/ultisnips'
+        Plugin 'honza/vim-snippets'
+        " LaTeX
+        Plugin 'lervag/vimtex'
 "
 " }
 
@@ -242,15 +254,27 @@
 " }
 
 " Keyboard Remappings {
+
+    let mapleader = "\<Space>"
+
     nnoremap <C-J> <C-W><C-J>
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-L> <C-W><C-L>
     nnoremap <C-H> <C-W><C-H>
 
+    " NerdTree open/close to F3
+    nnoremap <F3> :NERDTreeToggle<CR>
+
     " YouCompleteMe bindings
-    nnoremap <leader>gu :YcmCompleter GoToDeclaration<CR>
+    nnoremap <leader>gJ :YcmCompleter GoToDeclaration<CR>
     nnoremap <leader>gj :YcmCompleter GoToDefinition<CR>
     nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    nnoremap <leader>gt :YcmCompleter GetType<CR>
+    nnoremap <leader>gT :YcmCompleter GoToType<CR>
+    nnoremap <leader>gp :YcmCompleter GetParent<CR>
+    nnoremap <leader>gd :YcmCompleter GetDoc<CR>
+
+    nnoremap <leader>fi :YcmCompleter FixIt<CR>
 " }
 
 " Syntactic configuration {
@@ -273,6 +297,14 @@
 "let g:ale_completion_delay = 0
 " let g:ale_rust_cargo_use_check = 1
 
+
+" }
+
+" UltiSnips configuration {
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " }
 " Uncomment this if you use GVim in Windows
