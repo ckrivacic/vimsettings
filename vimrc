@@ -79,6 +79,7 @@
         " different version somewhere else.
         Plugin 'ascenator/L9', {'name': 'newL9'}
         Plugin 'scrooloose/nerdTree'
+        Plugin 'scrooloose/nerdcommenter'
         " surround.vim - simple quotation & bracket management
         Plugin 'tpope/vim-surround'
         
