@@ -61,7 +61,6 @@
 
     " }tt
 
-
 " Plugins {
 "
         " The following are examples of different formats supported.
@@ -82,6 +81,12 @@
         Plugin 'scrooloose/nerdTree'
         " surround.vim - simple quotation & bracket management
         Plugin 'tpope/vim-surround'
+        
+        " COLORS
+        " Colors solarized
+        Plugin 'altercation/vim-colors-solarized'
+        " jellybeans
+        Plugin 'nanotech/jellybeans.vim'
 
         " syntax plugin
         "Plugin 'vim-syntastic/syntastic'
@@ -92,7 +97,9 @@
         let g:rtagsRcCmd = '/home/ckrivacic/apps/rtags/bin/rc'
         
         " Automatically keep tags up to date
-        Plugin 'ludovicchabant/vim-gutentags'
+        " Plugin 'ludovicchabant/vim-gutentags'
+        Plugin 'majutsushi/tagbar'
+        nmap <F8> :TagbarToggle<CR>
         
         " Fuzzy searching with Ctrl-P
         Plugin 'kien/ctrlp.vim'
@@ -103,6 +110,14 @@
 
         " Completion
         Plugin 'ycm-core/YouCompleteMe'
+
+        " Airline
+        Plugin 'vim-airline/vim-airline'
+        Plugin 'vim-airline/vim-airline-themes'
+        let g:airline_theme='solarized_flood'
+
+        " Github gutters
+        Plugin 'mhinz/vim-signify'
 "
 " }
 
@@ -153,6 +168,7 @@
     set includeexpr=substitute(v:fname,'\\.','/','g')
 
     " YouCompleteMe
+
    
    " let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
    function! StartUp()
@@ -229,6 +245,11 @@
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-L> <C-W><C-L>
     nnoremap <C-H> <C-W><C-H>
+
+    " YouCompleteMe bindings
+    nnoremap <leader>gu :YcmCompleter GoToDeclaration<CR>
+    nnoremap <leader>gj :YcmCompleter GoToDefinition<CR>
+    nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " }
 
 " Syntactic configuration {
