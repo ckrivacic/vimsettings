@@ -1,5 +1,7 @@
 Required programs:
 
+Vundle to install plugins. 
+
 rtags
 any linters you want
 bear to get compiler options
@@ -9,5 +11,7 @@ Run rtags server:
     rdm &
 Index the files
     rc -c gcc -I...?
+Rtags might be unnecessary with YouCompleteMe, but it is more robust. 
+
 Load compilation commands
     rc -J /path/to/compilation_commands.json
