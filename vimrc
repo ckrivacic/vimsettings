@@ -83,7 +83,10 @@
         " surround.vim - simple quotation & bracket management
         Plugin 'tpope/vim-surround'
         " QUotation autocomplete
-        Plugin 'jiangmiao/auto-pairs'
+        Plugin 'tmsvg/pear-tree'
+        let g:pear_tree_smart_openers = 1
+        let g:pear_tree_smart_closers = 1
+        let g:pear_tree_smart_backspace = 1
 
         " Fixes repeat ('.') for certain plugins.
         Plugin 'tpope/vim-repeat'
@@ -300,7 +303,7 @@
 
 " }
 
-" UltiSnips configuration {
+" UltiSnips & AutoPairs configuration {
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
