@@ -96,6 +96,8 @@
         Plugin 'altercation/vim-colors-solarized'
         " jellybeans
         Plugin 'nanotech/jellybeans.vim'
+        " gruvbox
+        Plugin 'morhetz/gruvbox'
 
         " syntax plugin
         "Plugin 'vim-syntastic/syntastic'
@@ -204,7 +206,7 @@
     let g:solarized_termcolors=256
     syntax enable
     set background=dark
-    colorscheme solarized
+    colorscheme gruvbox
 
     " Statusline
     set laststatus=2
@@ -231,7 +233,7 @@
         " Color Scheme and Background
         syntax enable
         set background=dark
-        colorscheme solarized
+        colorscheme gruvbox
 
         " Enable mouse in a windows
         set mouse=a
