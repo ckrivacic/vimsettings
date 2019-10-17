@@ -12,7 +12,9 @@
 "##############################################################"
 
     " General Settings {
-
+        if has("autocmd")
+          au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+        endif
         "execute pathogen#infect()
         " We use Vim settings
         set nocompatible        " Must be the first line
@@ -96,6 +98,8 @@
         Plugin 'altercation/vim-colors-solarized'
         " jellybeans
         Plugin 'nanotech/jellybeans.vim'
+        " gruvbox
+        Plugin 'morhetz/gruvbox'
 
         " syntax plugin
         "Plugin 'vim-syntastic/syntastic'
@@ -140,7 +144,7 @@
 " Formatting {
 
     " Set maximum width of text line
-     set textwidth=72
+     set textwidth=79
      set colorcolumn=200
 
     " Tabs settings
@@ -204,7 +208,7 @@
     let g:solarized_termcolors=256
     syntax enable
     set background=dark
-    colorscheme solarized
+    colorscheme gruvbox
 
     " Statusline
     set laststatus=2
@@ -231,7 +235,7 @@
         " Color Scheme and Background
         syntax enable
         set background=dark
-        colorscheme solarized
+        colorscheme gruvbox
 
         " Enable mouse in a windows
         set mouse=a
