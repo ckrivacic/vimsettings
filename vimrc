@@ -217,6 +217,9 @@
     " Line numbers
     set number
     "highlight LineNr ctermfg=grey
+    
+    " save bookmarks between sessions
+    set viminfo='1000,f1
 
     " Set visual bell
     set vb
